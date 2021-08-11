@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bxslider</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <style>
+          *{margin: 0; padding:0;}
+          body{width:750px; height:49px;
+            background-color: #f7f9fa;
+            border: 1px solid #dae1e6;
+            position: relative;
+            padding: 10px; box-sizing: border-box;}
+          a,p{font-size: 13px; font-family: "돋움",dotum,sans-serif; text-decoration: none; color:#000;}
+          .xi-angle-right-min{position: absolute; top:50%; transform:translateY(-50%); font-weight: bold;}
+          p::after {content: "\e93f";}
+          .xi-angle-right-min::before{display: none;}
+          a:hover{text-decoration: underline;}
+          .slider a{display: block;}
+          .con{position: absolute; top:18px; left: 80px;}
+          li{list-style: none; padding: 0 10px; float: left;}
+          ul{position: absolute; right: 0; top:50%; transform:translateY(-50%); font-weight: bold;}
+          .news a{color:#3565c9;}
+          .news::after{content:""; background: #c8ccd1; width: 3px; height: 3px; border-radius: 50%; display: inline-block; margin-left: 10px;
+          vertical-align:middle;}
+
+            .bx-wrapper{border: none; box-shadow: none; background: none;}
+            .bx-wrapper .bx-next,.bx-wrapper .bx-prev{background: none;}
+            .bx-controls-direction{display: none;}
+            .bx-pager{display: none;}
+            
+        </style>
+        <script>
+          $(document).ready(function(){
+            $('.slider').bxSlider({
+                mode:'vertical',
+                pause: 2000,
+                auto: true
+            });
+          });
+        </script>
+</head>
+
+    <body>
+      <p class="xi-angle-right-min">연합뉴스</p>
+      <div class="con">
+        <div class="slider">
+          <a href="">정은경 "방역완화 메시지가 4차유행에 영향…신중히 소통하겠다"</a>
+          <a href="">홍남기 "재정운용은 정치결정 따라가는 것 아냐…여당과 충돌"</a>
+          <a href="">정은경 "방역완화 메시지가 4차유행에 영향…신중히 소통하겠다"</a>
+          <a href="">홍남기 "재정운용은 정치결정 따라가는 것 아냐…여당과 충돌"</a>
+        </div>
+      </div>
+        <ul>
+          <li class="news"><a href="">네이버뉴스</a></li>
+          <li><a href="">연예</a></li>
+          <li><a href="">스포츠</a></li>
+          <li><a href="">경제</a></li>
+        </ul>
+    </body>
+</html>
